@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <title>The Works of Christopher Nolan</title>
+</head>
+
+<body>
+    <header class="clearfix">
+        <img src="images/headerimage.png">
+        <h2>The Works of Christopher Nolan</h2>
+    </header>
+    <section>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade"> 
+                <img src="images/slideshow1.jpeg">
+                <div class="text">Inception</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="images/slideshow2.jpg">
+                <div class="text">The Dark Knight</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="images/slideshow3.jpeg">
+                <div class="text">Interstellar</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/slideshow4.jpg">
+                <div class="text">Tenet</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/slideshow5.jpg">
+                <div class="text">Dunkirk</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/slideshow6.jpeg">
+                <div class="text">Memento</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/slideshow7.jpg">
+                <div class="text">The Prestige</div>
+            </div>
+        </div>
+        <br>
+    </section>
+    <script>
+        window.onload = function() {
+            var d = new Date();
+            document.getElementById("copyright").innerHTML = d.getFullYear();
+        }
+    </script>
+    <footer>
+        <p>&copy;<span id="copyright"></span> Ei Tanaka Productions</p>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+    </script>
+</body>
+</html>
